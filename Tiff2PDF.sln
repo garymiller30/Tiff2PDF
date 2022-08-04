@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiff2PDF", "Tiff2PDF\Tiff2PDF.csproj", "{4F12947F-62A2-4E48-A0F7-65EFE3E7A40C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convert", "Convert\Convert.csproj", "{FDDF3978-3EC1-45CF-BC70-075BA699455A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F12947F-62A2-4E48-A0F7-65EFE3E7A40C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4F12947F-62A2-4E48-A0F7-65EFE3E7A40C}.Debug|Any CPU.Build.0 = Debug|x86
+		{4F12947F-62A2-4E48-A0F7-65EFE3E7A40C}.Debug|x86.ActiveCfg = Debug|x86
+		{4F12947F-62A2-4E48-A0F7-65EFE3E7A40C}.Debug|x86.Build.0 = Debug|x86
+		{4F12947F-62A2-4E48-A0F7-65EFE3E7A40C}.Release|Any CPU.ActiveCfg = Release|x86
+		{4F12947F-62A2-4E48-A0F7-65EFE3E7A40C}.Release|Any CPU.Build.0 = Release|x86
+		{4F12947F-62A2-4E48-A0F7-65EFE3E7A40C}.Release|x86.ActiveCfg = Release|x86
+		{4F12947F-62A2-4E48-A0F7-65EFE3E7A40C}.Release|x86.Build.0 = Release|x86
+		{FDDF3978-3EC1-45CF-BC70-075BA699455A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FDDF3978-3EC1-45CF-BC70-075BA699455A}.Debug|Any CPU.Build.0 = Debug|x86
+		{FDDF3978-3EC1-45CF-BC70-075BA699455A}.Debug|x86.ActiveCfg = Debug|x86
+		{FDDF3978-3EC1-45CF-BC70-075BA699455A}.Debug|x86.Build.0 = Debug|x86
+		{FDDF3978-3EC1-45CF-BC70-075BA699455A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDF3978-3EC1-45CF-BC70-075BA699455A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDF3978-3EC1-45CF-BC70-075BA699455A}.Release|x86.ActiveCfg = Release|Any CPU
+		{FDDF3978-3EC1-45CF-BC70-075BA699455A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94F2B126-0CBD-4A4C-9C42-F2232B70B760}
+	EndGlobalSection
+EndGlobal

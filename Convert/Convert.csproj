@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDDF3978-3EC1-45CF-BC70-075BA699455A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDFManipulate</RootNamespace>
+    <AssemblyName>PDFManipulate</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Magick.NET-Q8-x86, Version=11.3.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=x86">
+      <HintPath>..\packages\Magick.NET-Q8-x86.11.3.0\lib\net20\Magick.NET-Q8-x86.dll</HintPath>
+    </Reference>
+    <Reference Include="Magick.NET.Core, Version=11.3.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\Magick.NET.Core.11.3.0\lib\net20\Magick.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="PDFlib_dotnet, Version=9.2.0.0, Culture=neutral, PublicKeyToken=af0805f2b25bb299, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_Components\PDFLIB\9.2.0\x86\PDFlib_dotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Boxes\AutoTrimBox.cs" />
+    <Compile Include="Boxes\AbstractPageBox.cs" />
+    <Compile Include="ConverterSettings.cs" />
+    <Compile Include="Converters\AbstractConvert.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="Converters\AbstractConvertComponent.cs" />
+    <Compile Include="Converters\MultipleFiles.cs" />
+    <Compile Include="Converters\PdfLibConverter.cs" />
+    <Compile Include="Converters\SingleFile.cs" />
+    <Compile Include="Converters\ConvertModeEnum.cs" />
+    <Compile Include="Ext.cs" />
+    <Compile Include="Fasades\Pdf.cs" />
+    <Compile Include="Forms\FormEditAutoTrimDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditAutoTrimDialog.Designer.cs">
+      <DependentUpon>FormEditAutoTrimDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormList.Designer.cs">
+      <DependentUpon>FormList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSelectCountPages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSelectCountPages.Designer.cs">
+      <DependentUpon>FormSelectCountPages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSelectFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSelectFile.Designer.cs">
+      <DependentUpon>FormSelectFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSelectMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSelectMode.Designer.cs">
+      <DependentUpon>FormSelectMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Shema\Box.cs" />
+    <Compile Include="Shema\Document.cs" />
+    <Compile Include="Shema\EmptyTemplate.cs" />
+    <Compile Include="Shema\Page.cs" />
+    <Compile Include="Shema\PageColorspace.cs" />
+    <Compile Include="Shema\PageFont.cs" />
+    <Compile Include="Shema\PageImage.cs" />
+    <Compile Include="Shema\PageInfo.cs" />
+    <Compile Include="SplitPdfModeEnum.cs" />
+    <Compile Include="SplitPdfSettings.cs" />
+    <Compile Include="SupportFileFormats\AbstractFileFormat.cs" />
+    <Compile Include="SupportFileFormats\Bmp.cs" />
+    <Compile Include="SupportFileFormats\Images.cs" />
+    <Compile Include="SupportFileFormats\jpeg.cs" />
+    <Compile Include="SupportFileFormats\Jpg.cs" />
+    <Compile Include="SupportFileFormats\Pdf.cs" />
+    <Compile Include="SupportFileFormats\Ps.cs" />
+    <Compile Include="SupportFileFormats\Psd.cs" />
+    <Compile Include="SupportFileFormats\SupportedFileFormats.cs" />
+    <Compile Include="SupportFileFormats\Tif.cs" />
+    <Compile Include="SupportFileFormats\Tiff.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormEditAutoTrimDialog.resx">
+      <DependentUpon>FormEditAutoTrimDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormList.resx">
+      <DependentUpon>FormList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSelectCountPages.resx">
+      <DependentUpon>FormSelectCountPages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSelectFile.resx">
+      <DependentUpon>FormSelectFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSelectMode.resx">
+      <DependentUpon>FormSelectMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_play_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadingGIF.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Magick.NET-Q8-x86.11.3.0\build\net20\Magick.NET-Q8-x86.targets" Condition="Exists('..\packages\Magick.NET-Q8-x86.11.3.0\build\net20\Magick.NET-Q8-x86.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Magick.NET-Q8-x86.11.3.0\build\net20\Magick.NET-Q8-x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Magick.NET-Q8-x86.11.3.0\build\net20\Magick.NET-Q8-x86.targets'))" />
+  </Target>
+</Project>
